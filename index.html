@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T55C3G8K');</script>
+<!-- End Google Tag Manager -->
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T55C3G8K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <h1>Welcome to Our Restaurant! 😋</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <p>Experience the finest dining in town!</p>
+            <button class="call-to-action" onclick="window.location.href='billing.html'">Order Now! 🛒</button>
+        </section>
+
+        <section id="menu">
+            <h2>Our Delicious Menu</h2>
+            <div class="menu-item">
+                <h3>Pizza Margherita</h3>
+                <p>Classic tomato, mozzarella, and basil.</p>
+                <span class="price">$12.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>Spaghetti Carbonara</h3>
+                <p>Creamy sauce with pancetta and egg.</p>
+                <span class="price">$15.50</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <h3>Caesar Salad</h3>
+                <p>Fresh romaine, croutons, and Caesar dressing.</p>
+                <span class="price">$9.75</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Our Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Item added to cart! (Functionality to be implemented)');
+                // In a real application, you'd add the item to a cart array/object
+                // and then navigate to the billing page or update a cart summary.
+                // For this example, we'll just alert and let the "Order Now" button
+                // handle the navigation to the billing page.
+            });
+        });
+    </script>
+</body>
+</html>

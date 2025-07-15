@@ -9,72 +9,151 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T55C3G8K');</script>
 <!-- End Google Tag Manager -->
 
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Restaurant</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Restaurant Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .item-details h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .item-details p {
+            margin: 5px 0 0;
+            color: #777;
+        }
+        .item-price {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #e67e22;
+        }
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+        .cart-summary {
+            text-align: right;
+            margin-top: 30px;
+        }
+        .checkout-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .checkout-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T55C3G8K"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <h1>Our Delicious Menu</h1>
 
-    <header>
-        <h1>Welcome to Our Restaurant! 😋</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <p>Experience the finest dining in town!</p>
-            <button class="call-to-action" onclick="window.location.href='billing.html'">Order Now! 🛒</button>
-        </section>
-
-        <section id="menu">
-            <h2>Our Delicious Menu</h2>
-            <div class="menu-item">
-                <h3>Pizza Margherita</h3>
-                <p>Classic tomato, mozzarella, and basil.</p>
-                <span class="price">$12.99</span>
-                <button class="add-to-cart">Add to Cart</button>
+        <div class="menu-item">
+            <div class="item-details">
+                <h2>Classic Burger</h2>
+                <p>Beef patty, lettuce, tomato, cheese, special sauce.</p>
             </div>
-            <div class="menu-item">
-                <h3>Spaghetti Carbonara</h3>
-                <p>Creamy sauce with pancetta and egg.</p>
-                <span class="price">$15.50</span>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <h3>Caesar Salad</h3>
-                <p>Fresh romaine, croutons, and Caesar dressing.</p>
-                <span class="price">$9.75</span>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-        </section>
-    </main>
+            <span class="item-price">₹250.00</span>
+            <button class="add-to-cart" onclick="addToCart('Classic Burger', 250)">Add to Cart</button>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Our Restaurant. All rights reserved.</p>
-    </footer>
+        <div class="menu-item">
+            <div class="item-details">
+                <h2>Paneer Tikka Masala</h2>
+                <p>Cottage cheese in a rich, creamy tomato gravy.</p>
+            </div>
+            <span class="item-price">₹320.00</span>
+            <button class="add-to-cart" onclick="addToCart('Paneer Tikka Masala', 320)">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <h2>Veggie Pizza</h2>
+                <p>Assorted fresh vegetables, mozzarella, thin crust.</p>
+            </div>
+            <span class="item-price">₹400.00</span>
+            <button class="add-to-cart" onclick="addToCart('Veggie Pizza', 400)">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <h2>Chocolate Lava Cake</h2>
+                <p>Warm chocolate cake with a molten center.</p>
+            </div>
+            <span class="item-price">₹180.00</span>
+            <button class="add-to-cart" onclick="addToCart('Chocolate Lava Cake', 180)">Add to Cart</button>
+        </div>
+
+        <div class="cart-summary">
+            <p>Total items in cart: <span id="cart-count">0</span></p>
+            <button class="checkout-button" onclick="goToBilling()">Proceed to Billing</button>
+        </div>
+    </div>
 
     <script>
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', () => {
-                alert('Item added to cart! (Functionality to be implemented)');
-                // In a real application, you'd add the item to a cart array/object
-                // and then navigate to the billing page or update a cart summary.
-                // For this example, we'll just alert and let the "Order Now" button
-                // handle the navigation to the billing page.
-            });
-        });
+        let cart = [];
+        let cartCount = 0;
+
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+            alert(`${itemName} added to cart!`);
+        }
+
+        function goToBilling() {
+            // In a real application, you'd pass the cart data.
+            // For this example, we'll just navigate.
+            window.location.href = 'billing.html';
+        }
     </script>
 </body>
 </html>
